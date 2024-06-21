@@ -1,0 +1,51 @@
+#!/usr/bin/env bash
+
+TARGET_USER=$(ls -d /user/*) TARGET_USER="${TARGET_USER/'root'}"
+
+APP_DIR=/user/"$TARGET_USER"/home/Applications
+
+if [ -d "$APP_DIR" ]
+then
+  rm -rf "$APP_DIR"
+fi
+
+mkdir -m755 "$APP_DIR"
+mkdir "$APP_DIR"/All
+
+for fd in $(find "$APP_DIR" | grep -F ".desktop")
+do
+  if [ -f "$fd" ] && [[ ! " ${app_list[@]} " == *" $fd "* ]]
+  then
+    rm -f "$APP_DIR"/"$fd"
+  fi
+done
+
+for app in /usr/share/applications/*.desktop \
+           /user/"$TARGET_USER"/share/applications/*.desktop \
+           /var/lib/flatpak/exports/share/applications/*.desktop
+do
+  if [[ "$app" == *"/applications-folder.desktop" ]]
+  then
+    continue
+  fi
+
+  app_list+=("${app##*'/'}")
+
+  TO="$APP_DIR"
+  category=$(grep "Categories=" <"$app") category="${category#Categories=}" category="${category%%';'*}"
+
+  if [ ${#category} -eq 0 ]; then
+    category="All"
+  fi
+
+  mkdir -p "$APP_DIR"/"$category"
+    TO="$APP_DIR"/"$category"
+
+  cp "$app" "$APP_DIR"/"$category"
+
+  if [ ! "$category" == "All" ]; then
+    cp "$app" "$APP_DIR"/All
+  fi
+done
+
+chmod -R +x "$APP_DIR"
