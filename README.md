@@ -4,7 +4,7 @@
 
 ### Where to get stuff
 
-See [resources.md]
+![](resources.md)
 
 ### Apps
 
