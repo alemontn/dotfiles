@@ -1,0 +1,4 @@
+seterr()
+{
+  return "$1"
+}

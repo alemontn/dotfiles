@@ -1,0 +1,34 @@
+#
+# bashrc
+#
+
+if [ $(id -u) -eq 0 ]
+then
+  ROOT=$(ls -d /user/*) ROOT="${ROOT/'root'}"
+  if [ -z "$ROOT_PUSHED" ]
+  then
+    cd /
+    ROOT_PUSHED=1
+  fi
+else
+  ROOT=/user/"$USER"
+fi
+
+for rc in "$ROOT"/etc/bashrc.d/*.sh
+do
+  if [ -f "$rc" ] && [[ "$rc" == "/"*-"aliases.sh" ]]
+  then
+    while read line
+    do
+      if [ ! "${line::1}" == "#" ]
+      then
+        eval alias "$line"
+      fi
+    done \
+     <"$rc"
+  elif [ -f "$rc" ]
+  then
+    . "$rc"
+  fi
+done
+rc=

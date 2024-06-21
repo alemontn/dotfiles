@@ -1,0 +1,12 @@
+[submodule "gtk/Gruvbox-GTK-Theme"]
+	path = gtk/Gruvbox-GTK-Theme
+	url = https://github.com/Fausto-Korpsvart/Gruvbox-GTK-Theme
+[submodule "gtk/Graphite-gtk-theme"]
+	path = gtk/Graphite-gtk-theme
+	url = https://github.com/vinceliuice/Graphite-gtk-theme
+[submodule "alacritty/themes"]
+	path = alacritty/themes
+	url = https://github.com/alacritty/alacritty-theme
+[submodule "firefox/arkenfox"]
+	path = firefox/arkenfox
+	url = https://github.com/arkenfox/user.js/
