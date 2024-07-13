@@ -1,6 +1,6 @@
 # Basics
 
-![](assets/themes.png)
+![](themes.png)
 
 [Gruvbox - GTK theme](https://github.com/Fausto-Korpsvart/Gruvbox-GTK-Theme)
 
@@ -14,9 +14,9 @@
 
 ### Fonts
 
-![](assets/font_selection.png)
+![](font_selection.png)
 
-See [here](docs/Apple_Fonts.md)
+See [here](Apple_Fonts.md)
 
 # By App
 

@@ -1,6 +1,6 @@
 # dotfiles
 
-![](assets/desktop.png)
+![](desktop.png)
 
 ### Where to get stuff
 
