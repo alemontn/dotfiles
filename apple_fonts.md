@@ -20,11 +20,17 @@
 
 `cd <FONT NAME>Fonts`
 
-5) Extract the CPIO archive
+5) Extract the package
 
-`cpio -div < Payload`
+`7z x <FONT NAME>.pkg'
 
-6) Install the fonts
+`rm -f <FONT NAME>.pkg`
+
+6) Extract the CPIO archive
+
+`gunzip < <FONT NAME>.pkg/Payload | cpio -div'
+
+7) Install the fonts
 
 `cp Library/Fonts/*.otf ~/.local/share/fonts`
 
