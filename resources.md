@@ -16,7 +16,7 @@
 
 ![](font_selection.png)
 
-See [here](Apple_Fonts.md)
+See [here](apple_fonts.md)
 
 # By App
 

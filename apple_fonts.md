@@ -1,6 +1,6 @@
 # Where to get SF Mono / other Apple fonts
 
-### (1) Directly from Apple
+### (a) Directly from Apple
 
 1) Go to <https://developer.apple.com/fonts/>
 
@@ -34,7 +34,7 @@
 
 `cp Library/Fonts/*.otf ~/.local/share/fonts`
 
-### (2) From a repository
+### (b) From a repository
 
 SF Mono: <https://github.com/supercomputra/SF-Mono-Font>
 
