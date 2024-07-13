@@ -10,3 +10,9 @@
 [submodule "firefox/arkenfox"]
 	path = firefox/arkenfox
 	url = https://github.com/arkenfox/user.js/
+[submodule "plymouth/simplefuture"]
+	path = plymouth/simplefuture
+	url = https://github.com/volkavich/simplefuture
+[submodule "spicetify-themes"]
+	path = spicetify-themes
+	url = https://github.com/spicetify/spicetify-themes

@@ -29,3 +29,13 @@ See [here](docs/Apple_Fonts.md)
 ### Alacritty
 
 [Colour schemes](https://github.com/alacritty/alacritty-theme)
+
+### Plymouth
+
+["simplefuture"](https://github.com/volkavich/simplefuture)
+
+### Spotify
+
+[spicetify](https://spicetify.app/docs/advanced-usage/installation/)
+
+["spicetify-themes"](https://github.com/spicetify/spicetify-themes)

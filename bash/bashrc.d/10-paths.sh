@@ -12,7 +12,7 @@ add_path()
 # root dirs
 add_path /sbin /usr/sbin
 # user bin
-add_path "$ROOT"/bin
+add_path "$ROOT"/bin "$ROOT"/sbin
 # cargo
 add_path "$ROOT"/share/cargo/bin
 # spicetify
@@ -21,3 +21,5 @@ add_path "$ROOT"/share/spicetify
 add_path "$ROOT"/opt/pmbootstrap/bin
 # libadwaita-theme-changer
 add_path "$ROOT"/opt/libadwaita-theme-changer/bin
+# homebrew
+add_path /opt/brew/bin

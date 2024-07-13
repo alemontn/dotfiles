@@ -2,17 +2,25 @@
 # bashrc
 #
 
+eval "$(</etc/os-release)"
+
 if [ $(id -u) -eq 0 ]
 then
-  ROOT=$(ls -d /user/*) ROOT="${ROOT/'root'}"
+  ROOT=/user/"$USER"
   if [ -z "$ROOT_PUSHED" ]
   then
     cd /
     ROOT_PUSHED=1
   fi
+elif [ "$ID" == "darwin" ]
+then
+  ROOT=/Users/"$USER"
 else
   ROOT=/user/"$USER"
 fi
+
+HISTFILE="$ROOT"/etc/bash_history
+RCFILE="$ROOT"/etc/bashrc
 
 for rc in "$ROOT"/etc/bashrc.d/*.sh
 do
